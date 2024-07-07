@@ -11,8 +11,8 @@ const subTodoSchema = new mongoose.Schema(
       default: false,
     },
     createdBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      type: mongoose.Schema.Types.ObjectId,  // this will tell that the next field will have a reference to another model
+      ref: 'User',  // necessary to add ref next to type when to put refernce of other model
     },
   },
   { timestamps: true }
